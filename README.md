@@ -8,6 +8,10 @@ In this repository you will find example code alongside the topics of the course
 ## Setup
 
 ```sh
+git clone https://github.com/maddosz12/NF_DS_1_course_material.git
+```
+
+```sh
 conda env create --file environment.yml
 source activate neue-fische
 ```
