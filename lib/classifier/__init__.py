@@ -6,7 +6,7 @@ def fit(model, features, targets):
    model.fit(features, targets)
    end = time.time()
 
-   print(f'done in {end - start}s.')
+   print(f'Time train: {end - start}s.')
 
    return model
 
@@ -17,6 +17,6 @@ def predict(model, data):
    pred_proba = model.predict_proba(data)
    end = time.time()
 
-   print(f'done in {end - start}s.')
+   print(f'Time predict {end - start}s.')
 
    return pred, pred_proba
