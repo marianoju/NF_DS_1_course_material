@@ -29,11 +29,6 @@ if __name__ == '__main__':
 
         min_node_idx, min_gk = determine_alpha(tree_array[k].tree_)
 
-        # TODO: why do I need this?!
-        if min_node_idx == 0:
-            break
-
-        print(min_node_idx)
         prune(tree_array[k].tree_, min_node_idx)
 
         num_nodes = sum(1 * (tree_array[k].tree_.n_node_samples != 0))

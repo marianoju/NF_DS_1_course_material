@@ -13,11 +13,19 @@ def prune(inner_tree, index):
     # wenn es 'children' gibt besuche ich die 'children'
     if inner_tree.children_left[index] != _tree.TREE_LEAF:
         prune(inner_tree, inner_tree.children_left[index])
+
         prune(inner_tree, inner_tree.children_right[index])
 
-        # wenn ich die sub-Knoten beschnitten habe, muss ich die Kinder noch auf LEAF
+        # set node to leaf
+        idx_left = inner_tree.children_left[index]
+        idx_right = inner_tree.children_right[index]
+
         inner_tree.children_left[index] = _tree.TREE_LEAF
         inner_tree.children_right[index] = _tree.TREE_LEAF
+
+        inner_tree.n_node_samples[idx_left] = 0
+        inner_tree.n_node_samples[idx_right] = 0
+
 
     else:
         # wenn es keine 'children' gibt kann ich prunen
