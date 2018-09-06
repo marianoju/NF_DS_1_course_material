@@ -26,6 +26,9 @@ def prune(inner_tree, index):
         inner_tree.n_node_samples[idx_left] = 0
         inner_tree.n_node_samples[idx_right] = 0
 
+        inner_tree.impurity[idx_left] = 0
+        inner_tree.impurity[idx_right] = 0
+
 
     else:
         # wenn es keine 'children' gibt kann ich prunen

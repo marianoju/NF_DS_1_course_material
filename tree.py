@@ -39,4 +39,3 @@ if __name__ == '__main__':
     if False:
         for k in range(0,len(tree_array)):
             export_graphviz(tree_array[k], out_file='tree' + str(k) + '.dot')
-
